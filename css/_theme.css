@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+:root {
+    /* main colors */
+    --main-color: #2F8BD2;
+    --accent-color: #154279;
+
+    /* neutral colors */
+    --black: #000;
+    --white: #fff;
+    --grey-50: #f2f2f2;
+    --grey-100: #d9d9d9;
+    --grey-200: #afafaf;
+    --grey-400: #8b8b8b;
+    --grey-800: #333;
+    --grey-950: #1e1e1e;
+
+    /* typography */
+    --primary-font:  "Roboto", sans-serif;
+    --condensed-font: "Roboto Condensed", sans-serif;
+    --flex-font: "Roboto Flex", sans-serif;
+}
