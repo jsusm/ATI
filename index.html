@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ATI[UCV]Log 2026-1</title>
+  <meta charset="UTF-8" />
+  <link rel="icon" sizes="32x32" href="../icon/cropped-logonuevo-32x32.png" />
+  <link rel="icon" sizes="192x192" href="../icon/cropped-logonuevo-192x192.png" />
+  <style>
+    @import "../css/_theme.css";
+
+    body {
+      min-height: 100vh;
+      padding: 0;
+      margin: 0;
+      background: var(--grey-50);
+      font-family: var(--primary-font);
+    }
+
+    a {
+      color: var(--main-color);
+    }
+
+    a:hover {
+      color: var(--accent-color);
+    }
+
+    img {
+      width: 100%;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--main-color);
+      height: 80px;
+      gap: 28px;
+      padding-inline: 28px;
+
+      form {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+
+        input {
+          font-size: 16px;
+          width: 100%;
+          max-width: 300px;
+          height: 40px;
+          border-radius: 8px 0px 0px 8px;
+          border: none;
+          padding-inline: 16px;
+        }
+
+        button {
+          border-radius: 0px 8px 8px 0px;
+          border: none;
+          padding-inline: 16px;
+          font-size: 16px;
+          background: var(--accent-color);
+          color: var(--white);
+        }
+      }
+      .user-icon {
+        background: var(--accent-color);
+        height: 32px;
+        aspect-ratio: 1;
+        padding: 8px;
+        display: flex;
+        border-radius: 50px;
+      }
+    }
+
+    #logo {
+      font-size: 3em;
+      color: var(--white);
+      font-weight: bold;
+
+      span {
+        font-size: 0.5em;
+        font-weight: normal;
+      }
+    }
+
+    .content {
+      padding-inline: 32px;
+      max-width: 1264px;
+      margin-inline: auto;
+      padding-bottom: 64px;
+      .gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+      }
+    }
+
+    .student-card {
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--main-color);
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 16px;
+      .student-card_img {
+        height: fit-content;
+        height: 400px;
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .student-card_content {
+        background: var(--white);
+        padding-inline: 16px;
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+
+    footer {
+      height: 120px;
+      border-top: 1px solid var(--grey-200);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-size: 18px;
+        color: var(--grey-200);
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <p id="logo">ATI<span>[UCV]</span>Log</p>
+    <form>
+      <input placeholder="Nombre...">
+      <button>Buscar</button>
+    </form>
+    <div class="user-icon">
+      <img src="./icon/userIcon.svg">
+    </div>
+  </header>
+  <section class="content">
+    <h1>
+      Semestre 2026-1
+    </h1>
+    <div class="gallery">
+      <div class="student-card">
+        <div class="student-card_img">
+          <img src="./30871641/30871641.jpeg">
+        </div>
+        <div class="student-card_content">
+          <p>Jesús Marcano</p>
+        </div>
+      </div>
+      <div class="student-card">
+        <div class="student-card_img">
+          <img src="./Dummies/Dummy1.png">
+        </div>
+        <div class="student-card_content">
+          <p>María Hernandez</p>
+        </div>
+      </div>
+
+      <div class="student-card">
+        <div class="student-card_img">
+          <img src="./Dummies/Dummy2.png">
+        </div>
+        <div class="student-card_content">
+          <p>José José</p>
+        </div>
+      </div>
+
+      <div class="student-card">
+        <div class="student-card_img">
+          <img src="./Dummies/Dummy3.png">
+        </div>
+        <div class="student-card_content">
+          <p>Gualberto Ibarreto</p>
+        </div>
+      </div>
+
+      <div class="student-card">
+        <div class="student-card_img">
+          <img src="./Dummies/Dummy4.png">
+        </div>
+        <div class="student-card_content">
+          <p>Fernanda Cañizales</p>
+        </div>
+      </div>
+
+      <div class="student-card">
+        <div class="student-card_img">
+          <img src="./Dummies/Dummy5.png">
+        </div>
+        <div class="student-card_content">
+          <p>Símon Días</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <p>
+      Copyright © 2026 Escuela de computación - ATI. Todos los derechos reservados
+    </p>
+  </footer>
+</body>
+
+</html>
