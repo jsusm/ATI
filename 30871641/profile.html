@@ -6,66 +6,19 @@
   <meta charset="UTF-8" />
   <link rel="icon" sizes="32x32" href="../icon/cropped-logonuevo-32x32.png" />
   <link rel="icon" sizes="192x192" href="../icon/cropped-logonuevo-192x192.png" />
-  <style>
-    @import "../css/_theme.css";
-    body{
-      min-height: 100vh;
-      padding: 0;
-      margin: 0;
-      background: var(--grey-50);
-      font-family: var(--primary-font);
-    }
-    a{
-      color: var(--main-color);
-    }
-    a:hover {
-      color: var(--accent-color);
-    }
-
-    img {
-      width: 100%;
-    }
-    .user-profile {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      background: var(--white);
-      max-width: 1000px;
-      box-shadow: 0px 4px 8px var(--grey-200);
-    }
-
-    .user-profile_content {
-      padding-inline: 24px;
-      h1 {
-        color: var(--main-color);
-        font-size: 32px;
-      }
-    }
-
-    .user-profile_content_qualities-keys {
-      font-weight: bold;
-      text-wrap: nowrap;
-      padding-right: 8px;
-    }
-
-    .user-profile_content_description {
-      font-family: var(--condensed-font);
-      font-style: italic;
-    }
-
-    .user-profile_img_container {
-      background: var(--main-color);
-      padding: 0px 8px 0px 0px;
-
-      img{
-        height: 100%;
-        border-radius: 0px 0px 80px 0px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="../css/style.css" >
 </head>
 
 <body>
   <header>
+    <p id="logo">ATI<span>[UCV]</span>Log</p>
+    <form>
+      <input placeholder="Nombre...">
+      <button>Buscar</button>
+    </form>
+    <div class="user-icon">
+      <img src="../icon/userIcon.svg">
+    </div>
   </header>
   <section class="user-profile">
     <div class="user-profile_img_container">
@@ -129,6 +82,9 @@
     </div>
   </section>
   <footer>
+    <p>
+      Copyright © 2026 Escuela de computación - ATI. Todos los derechos reservados
+    </p>
   </footer>
 </body>
 
