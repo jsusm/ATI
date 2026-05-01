@@ -67,6 +67,7 @@ header {
   font-size: 3em;
   color: var(--white);
   font-weight: bold;
+  text-decoration: none;
 
   span {
     font-size: 0.5em;
