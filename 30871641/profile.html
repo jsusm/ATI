@@ -4,9 +4,10 @@
 <head>
   <title>Jesús Marcano</title>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" sizes="32x32" href="../icon/cropped-logonuevo-32x32.png" />
   <link rel="icon" sizes="192x192" href="../icon/cropped-logonuevo-192x192.png" />
-  <link rel="stylesheet" href="../css/style.css" >
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -19,10 +20,16 @@
     <div class="user-icon">
       <img src="../icon/userIcon.svg">
     </div>
+    <div class="nav-responsive-menu">
+      <img src="../menuIcon.svg" alt="Menu icon" />
+    </div>
   </header>
   <section class="user-profile">
     <div class="user-profile_img_container">
-      <img src="./30871641.jpeg" alt="Imagen de Jesús Marcano">
+      <picture>
+        <source media="(min-width: 768px)" srcset="./30871641Big.jpeg">
+        <img src="./30871641Small.jpeg" alt="Imagen de perfil">
+      </picture>
     </div>
     <div class="user-profile_content">
       <h1>Jesús Marcano</h1>

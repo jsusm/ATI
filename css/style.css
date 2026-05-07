@@ -35,7 +35,7 @@ header {
     justify-content: center;
 
     input {
-      font-size: 16px;
+      font-size: 1rem;
       width: 100%;
       max-width: 300px;
       height: 40px;
@@ -48,11 +48,12 @@ header {
       border-radius: 0px 8px 8px 0px;
       border: none;
       padding-inline: 16px;
-      font-size: 16px;
+      font-size: 1rem;
       background: var(--accent-color);
       color: var(--white);
     }
   }
+
   .user-icon {
     background: var(--accent-color);
     height: 32px;
@@ -61,10 +62,13 @@ header {
     display: flex;
     border-radius: 50px;
   }
+  .nav-responsive-menu {
+    display: none;
+  }
 }
 
 #logo {
-  font-size: 3em;
+  font-size: 3rem;
   color: var(--white);
   font-weight: bold;
   text-decoration: none;
@@ -77,14 +81,15 @@ header {
 
 .content {
   padding-inline: 32px;
-  max-width: 964px;
+  max-width: 1200px;
   margin-inline: auto;
   padding-bottom: 64px;
-  .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 48px;
-  }
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 32px;
 }
 
 .student-card {
@@ -100,18 +105,21 @@ header {
 
   .student-card_img {
     height: fit-content;
+
     img {
       aspect-ratio: 1;
       object-fit: cover;
     }
   }
+
   .student-card_content {
     background: var(--white);
     padding-inline: 16px;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
   }
 }
+
 .student-card:hover {
   background: var(--accent-color);
   rotate: 8deg;
@@ -124,27 +132,28 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+
   p {
-    font-size: 18px;
+    font-size: 1.125rem;
     color: var(--grey-200);
   }
 }
 
 
 .user-profile {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
+  display: flex;
   background: var(--white);
-  max-width: 1000px;
   box-shadow: 0px 4px 8px var(--grey-200);
   margin-bottom: 64px;
 }
 
 .user-profile_content {
   padding-inline: 24px;
+
   h1 {
     color: var(--main-color);
-    font-size: 32px;
+    font-size: 2.125rem;
+    font-weight: 900;
   }
 }
 
@@ -157,14 +166,100 @@ footer {
 .user-profile_content_description {
   font-family: var(--condensed-font);
   font-style: italic;
+  color: var(--grey-800);
+  font-size: 1.125rem;
 }
 
 .user-profile_img_container {
+  width: clamp(600px, 100%,800px);
+  min-width: 400px;
   background: var(--main-color);
   padding: 0px 8px 0px 0px;
 
-  img{
+  img {
     height: 100%;
+    object-fit: cover;
     border-radius: 0px 0px 80px 0px;
   }
 }
+
+
+/* Dispositivos mobiles */
+@media (max-width: 480px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .user-profile {
+    flex-direction: column;
+  }
+
+  .user-profile_img_container {
+    max-width: 100%;
+    width: 100%;
+    max-height: 600px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0px 0px 80px 0px;
+    }
+  }
+
+  header {
+    form {
+      display: none;
+    }
+    .user-icon{
+      display: none;
+    }
+    .nav-responsive-menu {
+      display: block;
+    }
+  }
+}
+
+/* Dispositivos tablets y ipad */
+@media (min-width: 481px) and (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .user-profile {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-profile_img_container {
+    max-width: 100%;
+    width: 100%;
+    max-height: 600px;
+
+    img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 0px 0px 80px 0px;
+    }
+  }
+
+  header {
+    form {
+      display: none;
+    }
+    .user-icon{
+      display: none;
+    }
+    .nav-responsive-menu {
+      display: block;
+    }
+  }
+}
+
+/* Pantallas pequeñas */
+@media (min-width: 769px) and (max-width: 1024px) {}
+
+/* Pantallas pequeñas */
+@media (min-width: 769px) and (max-width: 1024px) {}
+
+/* Pantallas grandes */
+@media (min-width: 1025px) and (max-width: 1200px) {}
