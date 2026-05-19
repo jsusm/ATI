@@ -9,85 +9,30 @@
   <link rel="icon" sizes="192x192" href="../icon/cropped-logonuevo-192x192.png">
   <link rel="stylesheet" href="./css/style.css">
   <script src="conf/configES.json"></script>
-  <script src="js/index.js"></script>
+  <script src="data/index.json"></script>
+  <script src="js/index.js" defer></script>
 </head>
 
 <body>
   <header>
-    <a href="/" id="logo">ATI<span>[UCV]</span>Log</a>
+    <a href="/" id="logo"><span id="logo-text-0"></span><span id="logo-text-1" class="logo-small-subtext"></span><span id="logo-text-2"></span></a>
     <form>
-      <input placeholder="Nombre...">
-      <button>Buscar</button>
+      <input id="search-input">
+      <button id="search-button">Buscar</button>
     </form>
     <div class="user-icon">
       <img src="./icon/userIcon.svg">
     </div>
   </header>
   <section class="content">
-    <h1>
+    <h1 id="main-title">
       Semestre 2026-1
     </h1>
-    <div class="gallery">
-      <a href="/30871641/profile.html" class="student-card">
-        <div class="student-card_img">
-          <picture>
-            <source media="(min-width: 768px)" srcset="./30871641/30871641Big.jpeg">
-            <img src="./30871641/30871641Small.jpeg" alt="Imagen de perfil">
-          </picture>
-        </div>
-        <div class="student-card_content">
-          <p>Jesús Marcano</p>
-        </div>
-      </a>
-      <div class="student-card">
-        <div class="student-card_img">
-          <img src="./Dummies/Dummy1.png">
-        </div>
-        <div class="student-card_content">
-          <p>María Hernandez</p>
-        </div>
-      </div>
-
-      <div class="student-card">
-        <div class="student-card_img">
-          <img src="./Dummies/Dummy2.png">
-        </div>
-        <div class="student-card_content">
-          <p>José José</p>
-        </div>
-      </div>
-
-      <div class="student-card">
-        <div class="student-card_img">
-          <img src="./Dummies/Dummy3.png">
-        </div>
-        <div class="student-card_content">
-          <p>Gualberto Ibarreto</p>
-        </div>
-      </div>
-
-      <div class="student-card">
-        <div class="student-card_img">
-          <img src="./Dummies/Dummy4.png">
-        </div>
-        <div class="student-card_content">
-          <p>Fernanda Cañizales</p>
-        </div>
-      </div>
-
-      <div class="student-card">
-        <div class="student-card_img">
-          <img src="./Dummies/Dummy5.png">
-        </div>
-        <div class="student-card_content">
-          <p>Símon Días</p>
-        </div>
-      </div>
+    <div class="gallery" id="gallery-container">
     </div>
   </section>
   <footer>
-    <p>
-      Copyright © 2026 Escuela de computación - ATI. Todos los derechos reservados
+    <p id="copyright">
     </p>
   </footer>
 </body>
