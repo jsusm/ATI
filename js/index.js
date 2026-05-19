@@ -57,6 +57,7 @@ function renderStudents() {
   })
 }
 
+console.log(config)
 
 setSimpleTextElement('search', 'search-button')
 setPlaceholder2Element('name', 'search-input')

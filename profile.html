@@ -8,24 +8,24 @@
   <link rel="icon" sizes="32x32" href="../icon/cropped-logonuevo-32x32.png" />
   <link rel="icon" sizes="192x192" href="../icon/cropped-logonuevo-192x192.png" />
   <link rel="stylesheet" href="../css/style.css">
+  <script src="conf/configES.json" type="text/javascript"></script>
+  <script src="/js/profile.js" defer></script>
 </head>
 
 <body>
   <header>
-    <a href="/" id="logo">ATI<span>[UCV]</span>Log</a>
+    <a href="/" id="logo"><span id="logo-text-0"></span><span id="logo-text-1" class="logo-small-subtext"></span><span
+        id="logo-text-2"></span></a>
     <form>
-      <input placeholder="Nombre...">
-      <button>Buscar</button>
+      <input id="search-input">
+      <button id="search-button"></button>
     </form>
     <div class="user-icon">
-      <img src="../icon/userIcon.svg">
-    </div>
-    <div class="nav-responsive-menu">
-      <img src="../menuIcon.svg" alt="Menu icon" />
+      <img src="./icon/userIcon.svg">
     </div>
   </header>
   <section class="user-profile">
-    <div class="user-profile_img_container">
+    <div class="user-profile_img_container" id="img-container">
       <picture>
         <source media="(min-width: 768px)" srcset="./30871641Big.jpeg">
         <img src="./30871641Small.jpeg" alt="Imagen de perfil">
@@ -38,56 +38,57 @@
       <table>
         <tbody>
           <tr>
-            <td class="user-profile_content_qualities-keys">
-              Mi color favorito es:
+            <td class="user-profile_content_qualities-keys" id="favorite-color-key">
             </td>
-            <td>
-              Verde
+            <td id="favorite-color-value">
             </td>
           </tr>
           <tr>
-            <td class="user-profile_content_qualities-keys">
-              Mi libro favorito es:
+            <td class="user-profile_content_qualities-keys" id="favorite-book-key">
             </td>
-            <td>
-              Yo robot
+            <td id="favorite-book-value">
             </td>
           </tr>
           <tr>
-            <td class="user-profile_content_qualities-keys">
-              Mi género musical favorito es:
+            <td class="user-profile_content_qualities-keys" id="favorite-music-key">
             </td>
-            <td>
-              Balada
+            <td id="favorite-music-value">
             </td>
           </tr>
           <tr>
-            <td class="user-profile_content_qualities-keys">
-              Mi videojuego favorito es:
+            <td class="user-profile_content_qualities-keys" id="favorite-game-key">
             </td>
-            <td>
-              Mindustry
+            <td id="favorite-game-value">
             </td>
           </tr>
           <tr>
-            <td class="user-profile_content_qualities-keys">
-              Lenguajes aprendidos:
+            <td class="user-profile_content_qualities-keys" id="learned-languages-key">
             </td>
-            <td>
-              C/C++, Pytdon, Javascript, Typescript, Go, Haskell, Prolog, Java.
+            <td id="learned-languages-value">
+            </td>
+          </tr>
+          <tr>
+            <td class="user-profile_content_qualities-keys" id="gender-key">
+            </td>
+            <td id="gender-value">
+            </td>
+          </tr>
+          <tr>
+            <td class="user-profile_content_qualities-keys" id="birth_date-key">
+            </td>
+            <td id="birth_date-value">
             </td>
           </tr>
         </tbody>
       </table>
       <p>
-        Si necesitan comunicarse conmigo me pueden escribir a:
-        <a href="mailto:jsusmarcano.jm@gmail.com">jsusmarcano.jm@gmail.com</a>
+        <span id="contact-copy"></span>
+        <a id="contact-anchor"></a>
       </p>
     </div>
   </section>
   <footer>
-    <p>
-      Copyright © 2026 Escuela de computación - ATI. Todos los derechos reservados
+    <p id="copyright">
     </p>
   </footer>
 </body>
