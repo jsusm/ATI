@@ -12,15 +12,24 @@
 </head>
 
 <body>
-  <header>
-    <a href="/" id="logo"><span id="logo-text-0"></span><span id="logo-text-1" class="logo-small-subtext"></span><span
-        id="logo-text-2"></span></a>
+  <header class="unfolded" id="main-header">
+    <div class="title-container">
+      <a href="/" id="logo"><span id="logo-text-0"></span><span id="logo-text-1" class="logo-small-subtext"></span><span
+          id="logo-text-2"></span></a>
+
+      <button class="nav-responsive-menu" id="nav-burger-button">
+        <img src="./menuIcon.svg">
+      </button>
+    </div>
     <form id="search-form">
       <input id="search-input" name="query">
       <button id="search-button" type="submit">Buscar</button>
     </form>
-    <div class="user-icon">
-      <img src="./icon/userIcon.svg">
+    <div class="profile-button">
+      <p>Mi Perfil</p>
+      <div class="user-icon">
+        <img src="./icon/userIcon.svg">
+      </div>
     </div>
   </header>
   <section class="user-profile">

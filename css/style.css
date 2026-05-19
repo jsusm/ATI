@@ -25,7 +25,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: var(--main-color);
-  height: 80px;
+  padding-block: 16px;
   gap: 28px;
   padding-inline: 28px;
 
@@ -51,6 +51,17 @@ header {
       font-size: 1rem;
       background: var(--accent-color);
       color: var(--white);
+    }
+  }
+
+  .profile-button {
+    display: flex;
+    gap: 16px;
+    color: var(--white);
+    font-weight: 600;
+
+    p {
+      display: none;
     }
   }
 
@@ -180,7 +191,7 @@ footer {
 
 .user-profile_img_container {
   width: clamp(600px, 100%, 800px);
-  min-width: 400px;
+  min-width: 300px;
   background: var(--main-color);
   padding: 0px 8px 0px 0px;
 
@@ -204,6 +215,7 @@ footer {
 
   .user-profile_img_container {
     max-width: 100%;
+    min-width: auto;
     width: 100%;
     max-height: 600px;
 
@@ -214,7 +226,17 @@ footer {
     }
   }
 
+  table {
+    tr {
+      display: flex;
+      flex-direction: column;
+      padding-block: 8px;
+    }
+  }
+
   header {
+    flex-direction: column;
+
     form {
       display: none;
     }
@@ -223,8 +245,48 @@ footer {
       display: none;
     }
 
+    .profile-button {
+      display: none;
+    }
+  }
+
+  .unfolded {
+    height: auto;
+
+    form {
+      display: flex;
+
+      input {
+        max-width: none;
+      }
+    }
+
+    .profile-button {
+      display: flex;
+      align-self: self-end;
+
+      p {
+        display: inline;
+      }
+    }
+
+    .user-icon {
+      display: block;
+    }
+  }
+
+
+  .title-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     .nav-responsive-menu {
       display: block;
+
+      background: transparent;
+      border: none;
     }
   }
 }
@@ -253,6 +315,9 @@ footer {
   }
 
   header {
+
+    flex-direction: column;
+
     form {
       display: none;
     }
@@ -261,8 +326,49 @@ footer {
       display: none;
     }
 
+    .profile-button {
+      display: none;
+    }
+  }
+
+  .unfolded {
+    height: auto;
+    flex-direction: column;
+
+    form {
+      display: flex;
+
+      input {
+        max-width: none;
+      }
+    }
+
+    .profile-button {
+      display: flex;
+      align-self: self-end;
+
+      p {
+        display: inline;
+      }
+    }
+
+    .user-icon {
+      display: block;
+    }
+  }
+
+
+  .title-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
     .nav-responsive-menu {
       display: block;
+
+      background: transparent;
+      border: none;
     }
   }
 }

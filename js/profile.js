@@ -85,6 +85,17 @@ function loadLanguageConfig() {
   })
 }
 
+function setUpResponsiveNavButton() {
+  const button = document.getElementById('nav-burger-button')
+  const header = document.getElementById('main-header')
+  button.addEventListener('click', () => {
+    console.log("toggle")
+    header.classList.toggle('unfolded')
+  })
+}
+
+setUpResponsiveNavButton()
+
 function setUpSearchForm() {
   const form = document.getElementById("search-form")
 
