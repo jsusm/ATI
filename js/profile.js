@@ -55,21 +55,44 @@ function setUpProfileImg(ci, imgExt) {
   `
 }
 
-setSimpleTextElement('search', 'search-button')
-setPlaceholder2Element('name', 'search-input')
-setSimpleTextElement('copyRight', 'copyright')
-setTextElementByList('site', ['logo-text-0', 'logo-text-1', 'logo-text-2'])
+function loadStudentProfile() {
+  const url = new URL(window.location.href)
 
-const url = new URL(window.location.href)
+  const studentCI = url.searchParams.get("studentCI")
 
-const studentCI = url.searchParams.get("studentCI")
+  const script = document.createElement('script')
+  script.src = `/${studentCI}/profile.json`
+  script.type = "text/javascript"
+  document.head.appendChild(script)
 
-const script = document.createElement('script')
-script.src = `/${studentCI}/profile.json`
-script.type = "text/javascript"
-document.head.appendChild(script)
+  return new Promise((resolve) => {
+    script.addEventListener('load', resolve)
+  })
+}
 
-script.addEventListener('load', () => {
+function loadLanguageConfig() {
+  const url = new URL(window.location.href)
+
+  let lang = url.searchParams.get("lang") ?? "ES"
+
+  const script = document.createElement('script')
+  script.src = `/conf/config${lang}.json`
+  script.type = "text/javascript"
+  document.head.appendChild(script)
+
+  return new Promise((resolve) => {
+    script.addEventListener('load', resolve)
+  })
+}
+
+Promise.all([loadStudentProfile(), loadLanguageConfig()]).then(() => {
+  // load general text
+  setSimpleTextElement('search', 'search-button')
+  setPlaceholder2Element('name', 'search-input')
+  setSimpleTextElement('copyRight', 'copyright')
+  setTextElementByList('site', ['logo-text-0', 'logo-text-1', 'logo-text-2'])
+
+  // load profile text
   setUpProfileImg(profile['ci'], profile['image_ext'])
 
   setElementProfileText('name', 'student-name')
@@ -98,5 +121,5 @@ script.addEventListener('load', () => {
 
   setSimpleTextElement('email', 'contact-copy')
   setElementProperty(requireElementById('contact-anchor'), 'href', `mailto:${profile['email']}`)
-  setElementProfileText('email','contact-anchor')
+  setElementProfileText('email', 'contact-anchor')
 })

@@ -57,12 +57,28 @@ function renderStudents() {
   })
 }
 
-console.log(config)
+function loadLanguageConfig() {
+  const url = new URL(window.location.href)
 
-setSimpleTextElement('search', 'search-button')
-setPlaceholder2Element('name', 'search-input')
-setSimpleTextElement('semester', 'main-title')
-setSimpleTextElement('copyRight', 'copyright')
-setTextElementByList('site', ['logo-text-0', 'logo-text-1', 'logo-text-2'])
+  let lang = url.searchParams.get("lang") ?? "ES"
 
-renderStudents()
+  const script = document.createElement('script')
+  script.src = `/conf/config${lang}.json`
+  script.type = "text/javascript"
+  document.head.appendChild(script)
+
+  return new Promise((resolve) => {
+    script.addEventListener('load', resolve)
+  })
+}
+
+loadLanguageConfig().then(() => {
+  setSimpleTextElement('search', 'search-button')
+  setPlaceholder2Element('name', 'search-input')
+  setSimpleTextElement('semester', 'main-title')
+  setSimpleTextElement('copyRight', 'copyright')
+  setTextElementByList('site', ['logo-text-0', 'logo-text-1', 'logo-text-2'])
+
+  renderStudents()
+})
+
