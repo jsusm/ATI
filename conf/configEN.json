@@ -1,0 +1,17 @@
+const config = {
+	"site": ["ITA","[UCV]","Log"],
+	"semester": "Semester 2026-1",
+	"home": "Home",
+	"login": "Login",
+	"copyRight":"Copyright © 2026 Computer school - ITA. All rights reserved",
+	"name":"Name",
+	"description":"",
+	"color":"My favorite color is",
+	"book":["My favorite book is", "My favorite books are"],
+	"music":["My favorite music genre is", "My favorite music genres are"],
+	"video_game":["My favorite video game is", "My favorite video games are"],
+	"language":"Programing languages learned",
+	"email":"Please send me an email to [email], if you need to contact me",
+	"search": "Search",
+	"profile": "Mi perfil"
+}

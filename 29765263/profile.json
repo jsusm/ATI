@@ -1,0 +1,14 @@
+const profile = {	
+	"name":"Sofía Marcano",
+	"description":"Soy estudiante de Computación en la Universidad Central de Venezuela (UCV), actualmente cursando el octavo semestre de la carrera. Además, tengo el privilegio de desempeñarme como preparadora de la materia Aplicaciones y Tecnologías de Internet. Me apasiona la programación competitiva, lo que me ha llevado a participar en el superregional Latinoamericano 2024 y 2025.",
+	"color": "Verde",
+	"book": ["Maus - Art Spiegelman"],
+	"music": ["Rock Alternativo", "Clásica"],
+	"video_game": ["Hollow Knight", "Portal2", "The Legend of Zelda: Twilight Princess"],
+	"language":["C/C++", "Java", "Python", "JavaScript", "TypeScript", "Prolog", "Haskell", "Kotlin"],
+	"email":"soamaia03@gmail.com",
+	"ci":"29765263",
+	"gender": "femenino",
+	"birth_date":"31/05/2003",
+	"image_ext": ".jpg"
+}

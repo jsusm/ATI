@@ -1,0 +1,17 @@
+const config = {
+	"site": ["ATI","[UCV]","Log"],
+	"semester": "Semestre 2026-1",
+	"home": "Inicio",
+	"login": "Entrar",
+	"copyRight":"Copyright © 2026 Escuela de computación - ATI. Todos los derechos reservados",
+	"name":"Nombre",
+	"description":"",
+	"color":"Mi color favorito es",
+	"book":["Mi libro favorito es", "Mis libros favoritos son"],
+	"music":["Mi género musical favorito es", "Mis géneros musicales favoritos son"],
+	"video_game":["Mi videojuego favorito es", "Mis videojuegos favoritos son"],
+	"language":"Lenguajes de programación aprendidos",
+	"email":"Si necesitan comunicarse conmigo me pueden escribir a [email]",
+	"search": "Buscar",
+	"profile": "Mi perfil"
+}

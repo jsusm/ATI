@@ -1,0 +1,14 @@
+const profile = {
+	"name":"Jesús Marcano",
+	"description":"Hola, Soy estudiante de la carrera de Computación en la Universidad Central de Venezuela, curso el sexto semestre de la carrera. Me esta interesando mucho el area de creación de productos de software y emprendimiento, uso neovim como mi editor de codigo, es lo más cercano a conectar tu cerebro a la computadora.",
+	"color": "Verde",
+	"book": ["Yo Robot - Isaac Asimov"],
+	"music": ["Balada", "Hip Hop"],
+	"video_game": ["Vintage Story", "Mindustry", "Metroid Fusion"],
+	"language":["C/C++", "Java", "Python", "JavaScript", "TypeScript", "Prolog", "Haskell", "Go", "Lisp"],
+	"email":"jsusmarcano.jm@gmail.com",
+	"ci":"30871641",
+	"gender": "Masculino",
+	"birth_date":"23/02/2005",
+	"image_ext": ".jpeg"
+}

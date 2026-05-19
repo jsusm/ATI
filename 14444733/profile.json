@@ -1,0 +1,14 @@
+const profile = {	
+	"name":"María Paula Herrero",
+	"description":"Soy licenciada en Computación de la UCV. Me desempeño en el área de ingeniería web y actualmente doy clases en la Escuela de Computación de la UCV. Además, desde el 2007 he venido desarrollando una segunda carrera como escritora e ilustradora. He participado en diversos talleres de escritura y actualmente estudio diseño gráfico en Prodiseño.",
+	"color": "Azul",
+	"book": ["El Señor de los Anillos"],
+	"music": ["Cualquiera menos regueton"],
+	"video_game": ["Pokemón Go"],
+	"language":["java", "php", "perl", "ruby", "python", "c++"],
+	"email":"mpaulaherrero@gmail.com",
+	"ci":"14444733",
+	"gender": "femenino",
+	"birth_date":"18/08/1972",
+	"image_ext": ".jpg"
+}
