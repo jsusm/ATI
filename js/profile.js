@@ -85,6 +85,29 @@ function loadLanguageConfig() {
   })
 }
 
+function setUpSearchForm() {
+  const form = document.getElementById("search-form")
+
+  const query = new URL(window.location.href).searchParams.get('query')
+  if(query) {
+    const input = document.getElementById('search-input')
+    input.value = query
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const formData = new FormData(e.target)
+
+    const query = formData.get('query')
+    const nextUrl = new URL(window.location.href)
+    nextUrl.pathname = '/'
+    nextUrl.searchParams.set('query', query)
+    window.location.assign(nextUrl)
+  })
+}
+
+setUpSearchForm()
+
 Promise.all([loadStudentProfile(), loadLanguageConfig()]).then(() => {
   // load general text
   setSimpleTextElement('search', 'search-button')

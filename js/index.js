@@ -51,7 +51,19 @@ function createStudentCard(ci, imgExt, name) {
 
 function renderStudents() {
   const gallery = requireElementById('gallery-container')
-  profiles.forEach((student) => {
+
+  const url = new URL(window.location.href)
+  const query = url.searchParams.get('query') ?? ''
+  let filteredProfiles = profiles.filter(p => p.name.toLowerCase().includes(query))
+
+  if(filteredProfiles.length == 0) {
+    gallery.innerHTML = `
+    <p class="gallery-fallback-message">${config['gallery-fallback-message'].replace('[query]', query)}</p>
+    `
+    gallery.className = ""
+  }
+
+  filteredProfiles.forEach((student) => {
     const studentCard = createStudentCard(student.ci, student.image_ext, student.name)
     gallery.appendChild(studentCard)
   })
@@ -71,6 +83,29 @@ function loadLanguageConfig() {
     script.addEventListener('load', resolve)
   })
 }
+
+function setUpSearchForm() {
+  const form = document.getElementById("search-form")
+
+  const query = new URL(window.location.href).searchParams.get('query')
+  if(query) {
+    const input = document.getElementById('search-input')
+    input.value = query
+  }
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    const formData = new FormData(e.target)
+
+    const query = formData.get('query')
+    const nextUrl = new URL(window.location.href)
+    nextUrl.pathname = '/'
+    nextUrl.searchParams.set('query', query)
+    window.location.assign(nextUrl)
+  })
+}
+
+setUpSearchForm()
 
 loadLanguageConfig().then(() => {
   setSimpleTextElement('search', 'search-button')

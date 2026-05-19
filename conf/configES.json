@@ -13,5 +13,6 @@ const config = {
 	"language":"Lenguajes de programación aprendidos",
 	"email":"Si necesitan comunicarse conmigo me pueden escribir a [email]",
 	"search": "Buscar",
-	"profile": "Mi perfil"
+	"profile": "Mi perfil",
+  "gallery-fallback-message": "No hay perfiles que tengan en su nombre: <b>[query]</b>"
 }

@@ -62,6 +62,7 @@ header {
     display: flex;
     border-radius: 50px;
   }
+
   .nav-responsive-menu {
     display: none;
   }
@@ -88,8 +89,15 @@ header {
 
 .gallery {
   display: grid;
+  width: 100%;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 32px;
+
+}
+
+.gallery-fallback-message {
+  color: var(--accent-color);
+  text-align: center;
 }
 
 .student-card {
@@ -171,7 +179,7 @@ footer {
 }
 
 .user-profile_img_container {
-  width: clamp(600px, 100%,800px);
+  width: clamp(600px, 100%, 800px);
   min-width: 400px;
   background: var(--main-color);
   padding: 0px 8px 0px 0px;
@@ -210,9 +218,11 @@ footer {
     form {
       display: none;
     }
-    .user-icon{
+
+    .user-icon {
       display: none;
     }
+
     .nav-responsive-menu {
       display: block;
     }
@@ -246,9 +256,11 @@ footer {
     form {
       display: none;
     }
-    .user-icon{
+
+    .user-icon {
       display: none;
     }
+
     .nav-responsive-menu {
       display: block;
     }
