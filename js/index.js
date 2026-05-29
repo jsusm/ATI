@@ -26,7 +26,13 @@ function setTextElementByList(confKey, elementIds) {
 
 function createStudentCard(ci, imgExt, name) {
   const userCard = document.createElement('a')
+
+  const nextUrl = new URL(window.location.href)
+  nextUrl.pathname = "/profile.html"
+  nextUrl.searchParams.set('studentCI', ci)
+
   userCard.className = "student-card"
+  userCard.href = nextUrl;
   userCard.innerHTML = `
     <div class="student-card_img">
       <picture>
@@ -41,9 +47,6 @@ function createStudentCard(ci, imgExt, name) {
 
   userCard.addEventListener("click", (e) => {
     e.preventDefault()
-    const nextUrl = new URL(window.location.href)
-    nextUrl.pathname = "/profile.html"
-    nextUrl.searchParams.set('studentCI', ci)
     window.location.assign(nextUrl)
   })
   return userCard
