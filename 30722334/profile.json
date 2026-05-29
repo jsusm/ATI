@@ -1,0 +1,14 @@
+const profile = {	
+	"name":"Mauricio González",
+	"description":"Aquí vuestro servidor, quien suscribe, de patronímico González y nombre de pila Mauricio, que ostenta la condición de colegial, pero no de esos aplicados y disciplinados, sino más bien de aquellos cuya índole propende con singular entusiasmo a la inacción prolongada, al reposo sistemático y a la procrastinación como artefacto existencial, conjugado con una capacidad intelectual que algunos maliciosos tacharían de menguada o, en términos más crudos, de rudeza de entendimiento; pero que alberga también, cual inesperado tesoro en fangal, una natural inclinación hacia los entresijos de la computación, así como una ambición, quizá ilusoria pero tenaz, de servirse de la programación, las artes matemáticas y la arquitectura algorítmica para desenredar, enfrentar y eventualmente disolver aquellos problemas que la realidad le ponga por delante, siempre que sea a excepción de su incapacidad flagrante, absoluta y recurrente para ofrecer de sí mismo una descripción que se ajuste siquiera remotamente a los parámetros convencionales de la autoexposición.",
+	"color": ["Gris", "Blanco", "Negro"],
+	"book": ["Elantris - Brandon Sanderson", "1984 - George Orwell"],
+	"music": ["Rock", "Jazz", "Bossa Nova", "Hip-Hop"],
+	"video_game": ["Minecraft", "AoTTG"],
+	"language":["C/C++", "Python", "JavaScript", "Java", "Prolog", "Haskell"],
+	"email":"mauriciogonzalez1256gmail.com",
+	"ci":"30722334",
+	"gender": "masculino",
+	"birth_date":"01/03/2005",
+	"image_ext": ".jpeg"
+}

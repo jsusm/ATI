@@ -1,0 +1,14 @@
+const profile = {	
+	"name":"Edwyn Guzmán",
+	"description":"¡Hola! soy estudiante de la Universidad Central de Venezuela y un apasionado por crear tecnología. Me especializo en desarrollar aplicaciones web y móviles con JavaScript y Python. Además de programar, soy preparador de Probabilidad y Estadística en la UCV, lo que me ha dado una base analítica sólida y la habilidad de trabajar en equipo para resolver problemas complejos. Me encantan los retos técnicos, aprender herramientas nuevas y colaborar en proyectos de código abierto para seguir aportando a la comunidad.",
+	"color": "Negro",
+	"book": ["Un proposito para mi vida"],
+	"music": ["Pop", "Clásica"],
+	"video_game": ["Outlast", "Inside", "The Elder Scrolls V: Skyrim"],
+	"language":["C/C++", "Java", "Python", "JavaScript", "TypeScript", "Prolog", "Haskell"],
+	"email":"edwynjesus30@gmail.com",
+	"ci":"30326271",
+	"gender": "Masculino",
+	"birth_date":"30/08/2004",
+	"image_ext": ".jpg"
+}

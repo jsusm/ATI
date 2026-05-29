@@ -1,0 +1,14 @@
+const profile = {	
+	"name":"Bryan Silva",
+	"description":"Soy un estudiante del 7mo semestre de Computación en la Universidad Central de Venezuela, con un fuerte enfoque en Computación Gráfica, Desarrollo Web y Bases de Datos. Me apasiona la tecnología en todas sus formas, los videojuegos, las historias de fantasia y el rol de mesa.",
+	"color": "Rojo",
+	"book": ["El enemigo de Dios - Bernard Cornwell"],
+	"music": ["Clasica", "OST de Videojuegos"],
+	"video_game": ["Minecraft", "Factorio"],
+	"language":["C/C++", "Java", "Python", "JavaScript", "Prolog", "Haskell", "Kotlin", "TypeScript", "Ruby"],
+	"email":"bryansvzla@gmail.com",
+	"ci":"27531458",
+	"gender": "masculino",
+	"birth_date":"07/07/2000",
+	"image_ext": ".jpg"
+}

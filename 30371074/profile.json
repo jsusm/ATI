@@ -1,0 +1,14 @@
+const profile = {	
+	"name":"Carlos Arena",
+	"description":"Soy Estudiante de la Facultad de Ciencias cursando el 6to semestre de la Licenciatura de Computaci&oacute;n en la Universidad Central de Venezuela (UCV) y estoy cursando actualmente la materia de Aplicaciones y Tecnolog&iacute;as de Internet",
+	"color": "Azul",
+	"book": ["El arte de la Guerra - Sun Tzu"],
+	"music": ["Hip Hop", "Rock"],
+	"video_game": ["Dark Souls 1"],
+	"language":["C/C++", "Java", "Python", "JavaScript", "Prolog", "Haskell"],
+	"email":"carlosarenaph@gmail.com",
+	"ci":"30371074",
+	"gender": "masculino",
+	"birth_date":"10/06/2004",
+	"image_ext": ".jpg"
+}

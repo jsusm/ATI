@@ -1,0 +1,14 @@
+const profile = {	
+	"name":"Gabriel Conde",
+	"description":"Soy estudiante de Computación en la Facultad de Ciencias de la Universidad Central de Venezuela (UCV), actualmente cursando el sexto semestre de la carrera. Me apasionan la programación, los videojuegos, la música, el dibujo y la escritura literaria, así como también la programación competitiva, razón por la cual participé en el Super Regional Latinoamericano ICPC 2024 y 2025.",
+	"color": "Naranja",
+	"book": ["Harry Potter (saga) - J.K. Rowling"],
+	"music": ["Pop Rock"],
+	"video_game": ["Pokémon (línea principal)"],
+	"language":["C/C++", "Java", "Python", "JavaScript", "Ruby", "Haskell", "Prolog"],
+	"email":"gabrieldavidcondenunez@gmail.com",
+	"ci":"32412330",
+	"gender": "masculino",
+	"birth_date":"12/02/2005",
+	"image_ext": ".jpg"
+}

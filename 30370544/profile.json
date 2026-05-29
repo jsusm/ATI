@@ -1,0 +1,14 @@
+const profile = {	
+	"name":"Génesis Montilla",
+	"description":"Soy estudiante de Computación en la Universidad Central de Venezuela (UCV), actualmente cursando el 6to semestre de la carrera. Actualmente formo parte del Cluster que es el centro deestudiantes de computacion. Además, en mis tiempos libres me gusta hacer Spinning y ver series",
+	"color": "Rojo",
+	"book": ["Los juegos del hambre"],
+	"music": ["Pop"],
+	"video_game": ["Mario Kart"],
+	"language":["C++", "Java", "Python", "Prolog", "Haskell"],
+	"email":"genesisvaleriamontilla@gmail.com",
+	"ci":"30370544",
+	"gender": "Femenino",
+	"birth_date":"10/08/2004",
+	"image_ext": ".jpg"
+}

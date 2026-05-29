@@ -1,0 +1,14 @@
+const profile = {	
+	"name":"Luis Jose Garcia Gutierrez",
+	"description":"Soy estudiante de Computacion en la Universidad Central de Venezuela (UCV) cursando actualmente mi septimo semestre. Parte de mis objetivos en la carrera es salir con la mencion de Base de Datos, soy apasionado con la tecnologia y me encantan las innovaciones actuales con la IA.",
+	"color": "Cian",
+	"book": ["El Codigo Da Vinci"],
+	"music": ["Rock"],
+	"video_game": ["Splinter Cell", "Battlefield 3, 4 y 1", "Halo"],
+	"language":["c++", "Java", "Python", "JavaScript"],
+	"email":"luis.guti2401@gmail.com",
+	"ci":"27663696",
+	"gender": "masculino",
+	"birth_date":"24/01/2000",
+	"image_ext": ".jpg"
+}

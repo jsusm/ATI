@@ -1,5 +1,80 @@
 const profiles = [
     {
+        "ci": "28309661",
+        "image_ext": ".jpg",
+        "name": "Oriana Arellano"
+    },
+    {
+        "ci": "30371074",
+        "image_ext": ".jpg",
+        "name": "Carlos Arena"
+    },
+    {
+        "ci": "27279497",
+        "image_ext": ".jpg",
+        "name": "Laura Barreto"
+    },
+    {
+        "ci": "31532714",
+        "image_ext": ".jpg",
+        "name": "Juan Belisario"
+    },
+    {
+        "ci": "29922041",
+        "image_ext": ".png",
+        "name": "Dayannis Colmenares"
+    },
+    {
+        "ci": "32412330",
+        "image_ext": ".jpg",
+        "name": "Gabriel Conde"
+    },
+    {
+        "ci": "27663696",
+        "image_ext": ".jpg",
+        "name": "Luis Jos\u00e9 Garc\u00eda"
+    },
+    {
+        "ci": "30722334",
+        "image_ext": ".jpeg",
+        "name": "Mauricio Gonz\u00e1lez"
+    },
+    {
+        "ci": "30326271",
+        "image_ext": ".jpg",
+        "name": "Edwyn Guzm\u00e1n"
+    },
+    {
+        "ci": "26111803",
+        "image_ext": ".png",
+        "name": "Darvin Hernández"
+    },
+    {
+        "ci": "30871641",
+        "image_ext": ".jpeg",
+        "name": "Jes\u00FAs Marcano"
+    },
+    {
+        "ci": "27377595",
+        "image_ext": ".jpg",
+        "name": "Stefany Mart\u00ednez"
+    },
+    {
+        "ci": "30370544",
+        "image_ext": ".jpg",
+        "name": "Génesis Montilla"
+    },
+    {
+        "ci": "27531458",
+        "image_ext": ".jpg",
+        "name": "Bryan Silva"
+    },
+    {
+        "ci": "31404213",
+        "image_ext": ".png",
+        "name": "Rolando Uzc\u00e1tegui"
+    },
+    {
         "ci": "29765263",
         "image_ext": ".jpg",
         "name": "Sof\u00eda Marcano"
@@ -8,10 +83,5 @@ const profiles = [
         "ci": "14444733",
         "image_ext": ".jpg",
         "name": "Mar\u00eda Paula Herrero"
-    },
-    {
-        "ci": "30871641",
-        "image_ext": ".jpeg",
-        "name": "Jes\u00FAs Marcano"
     }
 ]

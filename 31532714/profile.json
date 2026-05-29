@@ -1,0 +1,14 @@
+const profile = {	
+	"name":"Juan Belisario",
+	"description":"Soy estudiante de Ciencias de la Computación en la UCV que combina la precisión de los algoritmos y problemas matemáticos semi-complejos con una notable versatilidad en lenguajes que van desde el bajo nivel en C hasta la lógica pura de Python. Equilibro mi formación académica con una pasión activa por el fútbol internacional (siguiendo de cerca a clubes como Barcelona o el Chelsea) y una curiosidad constante por el rendimiento del hardware moderno. Actualmente, me encuentro en un punto estratégico de mi carrera, comenzando el sexto semestre, gestionando con pragmatismo mi carga académica y evaluando especializaciones en áreas como la Computación Gráfica o las Bases de Datos para definir mi futuro profesional.",
+	"color": "Naranja",
+	"book": ["El camino de El Dorado - Arturo Uslar Pietri"],
+	"music": ["Rock Alternativo", "Neoperreo", "Electrónica"],
+	"video_game": ["Geometry Dash", "Minecraft", "FNAF"],
+	"language":["C/C++", "Python", "Java", "Haskell", "Prolog"],
+	"email":"juanbeliuni@gmail.com",
+	"ci":"31532714",
+	"gender": "masculino",
+	"birth_date":"06/06/2005",
+	"image_ext": ".jpg"
+}

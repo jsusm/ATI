@@ -1,0 +1,14 @@
+const profile = {
+    "name":"Oriana Arellano",
+    "description":"Soy estudiantes de Computación en la Universidad Central de Venezuela (UCV), actualmente cursando el septimo semestre de la carrera. Además, soy auxiliar docente del laboratorio de Sonorización de Datos y preparadora de la materia Matemáticas Discretas I. Me apasiona la música y por eso me gustaria especializarme en la Sonorización de Datos, además me gustan mucho las redes y las Bases de Datos.",
+    "color": "Magenta",
+    "book": ["Como Agua para Chocolate"],
+    "music": ["Pop", "Rock", "Clasica", "Boleros"],
+    "video_game": ["It Takes Two"],
+    "language":["C/C++", "Java", "Kotlin", "Prolog", "Haskell"],
+    "email":"orianaarellanor@gmail.com",
+    "ci":"28309661",
+    "gender": "femenino",
+    "birth_date":"02/10/2001",
+    "image_ext": ".jpg"
+}

@@ -1,0 +1,14 @@
+const profile = {
+  "name": "Stefany Martínez",
+  "description": "Soy estudiante de Computación en la Universidad Central de Venezuela (UCV) actualmente cursando el octavo semestre de la carrera. He tenido el privilegio de trabajar en el área y ando cada día enfocada más en perfeccionar mis técnicas de programación.",
+  "color": "Morado",
+  "book": ["No tengo"],
+  "music": ["Pop","Pop Rock"],
+  "video_game": ["Baldur's Gate 3","The Witcher 3","God of War"],
+  "language": ["C/C++","Java","Python","JavaScript"],
+  "email": "tefymartinez99@gmail.com",
+  "ci": "27377595",
+  "gender": "femenino",
+  "birth_date": "06/09/1999",
+  "image_ext": ".jpg"
+}

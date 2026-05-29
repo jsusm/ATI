@@ -1,0 +1,14 @@
+const profile = {	
+	"name":"Laura Barreto",
+	"description":"Soy estudiante de Computacion en la Universidad Central de Venezuela (UCV) cursando actualmente mi septimo semestre. Actualmente trabajo en una empresa de software de autos.",
+	"color": "Lila",
+	"book": ["Resurreccion"],
+	"music": ["Merengue"],
+	"video_game": ["Mortal Kombat, Red Dead Redemption"],
+	"language":["java", "javascript", "python", "c++"],
+	"email":"laurabarretoloreto25@gmail.com",
+	"ci":"27279497",
+	"gender": "femenino",
+	"birth_date":"25/04/2000",
+	"image_ext": ".jpg"
+}

@@ -1,0 +1,14 @@
+const profile = {
+	"name":"Dayannis Colmenares",
+	"description":"Soy estudiante de Computación en la Universidad Central de Venezuela (UCV), actualmente cursando el sexto semestre de la carrera. En está ocasión se me presentó la oportunidad de ser preparadora de la materia Base de Datos, cuya área es una de mis favoritas por los momentos. Soy muy responsable y dedicada en todo lo que hago y estoy en el proceso de descubir qué me apasiona.",
+	"color": "Anaranjado",
+	"book": ["De: Mí Para: Mí La tormenta pasará"],
+	"music": ["Urbano"],
+	"video_game": ["Mortal Kombat"],
+	"language":["C/C++, PHP, JavaScript, Python"],
+	"email":"dayanniscolmenares@gmail.com",
+	"ci":"29922041",
+	"gender": "femenino",
+	"birth_date":"07/11/2003",
+	"image_ext": ".png"
+}

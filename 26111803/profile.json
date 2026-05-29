@@ -1,0 +1,14 @@
+const profile = {
+    "name":"Darvin Hernández",
+    "description":"Soy Estudiante de Computación de la Universidad Central de Venezuela (UCV), actualmente estoy cursando el Séptimo semestre de la carrera, me interesa mucho el área de Base de datos y el área de Aplicaciones en internet",
+    "color": "Azul",
+    "book": ["El Nombre del Viento - Patrick Rothfuss"],
+    "music": ["Rap"],
+    "video_game": ["League of legends"],
+    "language":["C/C++", "Python", "JavaScript", "Java"],
+    "email":"arondon33@gmail.com",
+    "ci":"26111803",
+    "gender": "Masculino",
+    "birth_date":"15/02/1996",
+    "image_ext": ".png"
+}
