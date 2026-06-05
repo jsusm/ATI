@@ -122,14 +122,6 @@ header {
   text-decoration: none;
   color: var(--grey-800);
 
-  .student-card_img {
-    height: fit-content;
-
-    img {
-      aspect-ratio: 1;
-      object-fit: cover;
-    }
-  }
 
   .student-card_content {
     background: var(--white);
@@ -138,6 +130,16 @@ header {
     font-weight: 400;
   }
 }
+
+.student-card_img_container {
+  height: fit-content;
+
+  .student-card_img {
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+}
+
 
 .student-card:hover {
   background: var(--accent-color);
