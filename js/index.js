@@ -25,31 +25,43 @@ function setTextElementByList(confKey, elementIds) {
 }
 
 function createStudentCard(ci, imgExt, name) {
-  const userCard = document.createElement('a')
-
+  // const userCard = document.createElement('a')
+  //
   const nextUrl = new URL(window.location.href)
   nextUrl.pathname = "/profile.html"
   nextUrl.searchParams.set('studentCI', ci)
-
-  userCard.className = "student-card"
-  userCard.href = nextUrl;
-  userCard.innerHTML = `
-    <div class="student-card_img">
-      <picture>
-        <source media="(min-width: 768px)" srcset="./${ci}/${ci}Big${imgExt}">
-        <img src="./${ci}/${ci}Small${imgExt}" alt="Imagen de perfil">
-      </picture>
-    </div>
-    <div class="student-card_content">
-      <p>${name}</p>
-    </div>
+  //
+  // userCard.className = "student-card"
+  // userCard.href = nextUrl;
+  // userCard.innerHTML = `
+  //   <div class="student-card_img_container">
+  //     <picture>
+  //       <source media="(min-width: 768px)" srcset="./${ci}/${ci}Big${imgExt}">
+  //       <img class="student-card_img" src="./${ci}/${ci}Small${imgExt}" alt="Imagen de perfil">
+  //     </picture>
+  //   </div>
+  //   <div class="student-card_content">
+  //     <p>${name}</p>
+  //   </div>
+  // `
+  //
+  // userCard.addEventListener("click", (e) => {
+  //   e.preventDefault()
+  //   window.location.assign(nextUrl)
+  // })
+  return `
+    <a href="${nextUrl}" id="${ci}" class="student-card">
+     <div class="student-card_img_container">
+       <picture>
+         <source media="(min-width: 768px)" srcset="./${ci}/${ci}Big${imgExt}">
+         <img class="student-card_img" src="./${ci}/${ci}Small${imgExt}" alt="Imagen de perfil">
+       </picture>
+     </div>
+     <div class="student-card_content">
+       <p>${name}</p>
+     </div>
+    </a>
   `
-
-  userCard.addEventListener("click", (e) => {
-    e.preventDefault()
-    window.location.assign(nextUrl)
-  })
-  return userCard
 }
 
 function renderStudents() {
@@ -59,17 +71,15 @@ function renderStudents() {
   const query = url.searchParams.get('query') ?? ''
   let filteredProfiles = profiles.filter(p => p.name.toLowerCase().includes(query))
 
-  if(filteredProfiles.length == 0) {
+  if (filteredProfiles.length == 0) {
     gallery.innerHTML = `
     <p class="gallery-fallback-message">${config['gallery-fallback-message'].replace('[query]', query)}</p>
     `
     gallery.className = ""
   }
 
-  filteredProfiles.forEach((student) => {
-    const studentCard = createStudentCard(student.ci, student.image_ext, student.name)
-    gallery.appendChild(studentCard)
-  })
+  const studentCards = filteredProfiles.map(student => createStudentCard(student.ci, student.image_ext, student.name)).join("\n")
+  gallery.innerHTML = studentCards
 }
 
 function loadLanguageConfig() {
@@ -91,7 +101,6 @@ function setUpResponsiveNavButton() {
   const button = document.getElementById('nav-burger-button')
   const header = document.getElementById('main-header')
   button.addEventListener('click', () => {
-    console.log("toggle")
     header.classList.toggle('unfolded')
   })
 }
@@ -102,7 +111,7 @@ function setUpSearchForm() {
   const form = document.getElementById("search-form")
 
   const query = new URL(window.location.href).searchParams.get('query')
-  if(query) {
+  if (query) {
     const input = document.getElementById('search-input')
     input.value = query
   }
