@@ -48,11 +48,9 @@ function createStudentCard(ci, imgExt, name) {
   `
 }
 
-function renderStudents() {
+function renderStudents(query='') {
   const gallery = requireElementById('gallery-container')
 
-  const url = new URL(window.location.href)
-  const query = url.searchParams.get('query') ?? ''
   let filteredProfiles = profiles.filter(p => p.name.toLowerCase().includes(query))
 
   if (filteredProfiles.length == 0) {
@@ -118,16 +116,16 @@ function setUpSearchForm() {
     const formData = new FormData(e.target)
 
     const query = formData.get('query')
-    const nextUrl = new URL(window.location.href)
-    nextUrl.pathname = '/'
-    nextUrl.searchParams.set('query', query)
-    window.location.assign(nextUrl)
+    renderStudents(query)
   })
 }
 
 setUpLangButton()
 setUpSearchForm()
 setUpResponsiveNavButton()
+
+loadProfiles()
+loadLangConfig(lang)
 
 function populateLanguage() {
   setSimpleTextElement('search', 'search-button')
