@@ -1,4 +1,4 @@
-const profile = {
+{
 	"name": "Rolando Uzcátegui",
 	"description": "Soy estudiante de Computación, apasionado por el desarrollo web y el diseño de interfaces. Me encanta resolver problemas complejos y aprender sobre nuevas tecnologías. Siempre estoy buscando retos que me permitan crecer profesionalmente y aportar valor. En mi tiempo libre, disfruto explorando nuevos hobbies.",
 	"color": "Naranja",

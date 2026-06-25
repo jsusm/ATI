@@ -1,4 +1,4 @@
-const profile = {
+{
     "name":"Oriana Arellano",
     "description":"Soy estudiantes de Computación en la Universidad Central de Venezuela (UCV), actualmente cursando el septimo semestre de la carrera. Además, soy auxiliar docente del laboratorio de Sonorización de Datos y preparadora de la materia Matemáticas Discretas I. Me apasiona la música y por eso me gustaria especializarme en la Sonorización de Datos, además me gustan mucho las redes y las Bases de Datos.",
     "color": "Magenta",

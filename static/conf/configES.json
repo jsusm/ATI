@@ -1,4 +1,4 @@
-const config = {
+{
 	"site": ["ATI","[UCV]","Log"],
 	"semester": "Semestre 2026-1",
 	"home": "Inicio",

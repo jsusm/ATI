@@ -1,4 +1,4 @@
-const profile = {	
+{
 	"name":"Génesis Montilla",
 	"description":"Soy estudiante de Computación en la Universidad Central de Venezuela (UCV), actualmente cursando el 6to semestre de la carrera. Actualmente formo parte del Cluster que es el centro deestudiantes de computacion. Además, en mis tiempos libres me gusta hacer Spinning y ver series",
 	"color": "Rojo",

@@ -1,4 +1,4 @@
-const profile = {	
+{
 	"name":"Carlos Arena",
 	"description":"Soy Estudiante de la Facultad de Ciencias cursando el 6to semestre de la Licenciatura de Computaci&oacute;n en la Universidad Central de Venezuela (UCV) y estoy cursando actualmente la materia de Aplicaciones y Tecnolog&iacute;as de Internet",
 	"color": "Azul",

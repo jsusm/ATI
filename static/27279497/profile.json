@@ -1,4 +1,4 @@
-const profile = {	
+{
 	"name":"Laura Barreto",
 	"description":"Soy estudiante de Computacion en la Universidad Central de Venezuela (UCV) cursando actualmente mi septimo semestre. Actualmente trabajo en una empresa de software de autos.",
 	"color": "Lila",

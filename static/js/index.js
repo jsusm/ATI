@@ -1,3 +1,6 @@
+let profiles = []
+let config = {}
+
 function requireElementById(elementId) {
   const element = document.getElementById(elementId)
   if (!element) {
@@ -30,31 +33,12 @@ function createStudentCard(ci, imgExt, name) {
   const nextUrl = new URL(window.location.href)
   nextUrl.pathname = "/profile.html"
   nextUrl.searchParams.set('studentCI', ci)
-  //
-  // userCard.className = "student-card"
-  // userCard.href = nextUrl;
-  // userCard.innerHTML = `
-  //   <div class="student-card_img_container">
-  //     <picture>
-  //       <source media="(min-width: 768px)" srcset="./${ci}/${ci}Big${imgExt}">
-  //       <img class="student-card_img" src="./${ci}/${ci}Small${imgExt}" alt="Imagen de perfil">
-  //     </picture>
-  //   </div>
-  //   <div class="student-card_content">
-  //     <p>${name}</p>
-  //   </div>
-  // `
-  //
-  // userCard.addEventListener("click", (e) => {
-  //   e.preventDefault()
-  //   window.location.assign(nextUrl)
-  // })
   return `
-    <a href="${nextUrl}" id="${ci}" class="student-card">
+    <a id="${ci}" class="student-card">
      <div class="student-card_img_container">
        <picture>
-         <source media="(min-width: 768px)" srcset="./${ci}/${ci}Big${imgExt}">
-         <img class="student-card_img" src="./${ci}/${ci}Small${imgExt}" alt="Imagen de perfil">
+         <source media="(min-width: 768px)" srcset="/static/${ci}/${ci}Big${imgExt}">
+         <img class="student-card_img" src="/static/${ci}/${ci}Small${imgExt}" alt="Imagen de perfil">
        </picture>
      </div>
      <div class="student-card_content">
@@ -82,18 +66,33 @@ function renderStudents() {
   gallery.innerHTML = studentCards
 }
 
-function loadLanguageConfig() {
-  const url = new URL(window.location.href)
+async function changeLanguage(language) {
+  await loadLangConfig(language)
+  await loadProfiles()
 
-  let lang = url.searchParams.get("lang") ?? "ES"
+  const setLangUrl = new URL(window.location.origin + '/index.py/set-lang')
+  setLangUrl.searchParams.set('lang', language)
 
-  const script = document.createElement('script')
-  script.src = `/conf/config${lang}.json`
-  script.type = "text/javascript"
-  document.head.appendChild(script)
+  await fetch(setLangUrl)
+}
 
-  return new Promise((resolve) => {
-    script.addEventListener('load', resolve)
+async function loadLangConfig(language) {
+  const langConfigUrl = new URL(window.location.origin + `/static/conf/config${language}.json`)
+  config = await fetch(langConfigUrl).then(res => res.json())
+}
+
+async function loadProfiles() {
+  const profilesUrl = new URL(window.location.origin + '/static/data/index.json')
+  profiles = await fetch(profilesUrl).then(res => res.json())
+}
+
+function setUpLangButton() {
+  const langButtons = ['EN', 'ES', 'PT']
+  langButtons.forEach(btn => {
+    document.getElementById(`change-lang-${btn}`)
+      .addEventListener('click', () => {
+        changeLanguage(btn).then(populateLanguage)
+      })
   })
 }
 
@@ -104,8 +103,6 @@ function setUpResponsiveNavButton() {
     header.classList.toggle('unfolded')
   })
 }
-
-setUpResponsiveNavButton()
 
 function setUpSearchForm() {
   const form = document.getElementById("search-form")
@@ -128,9 +125,11 @@ function setUpSearchForm() {
   })
 }
 
+setUpLangButton()
 setUpSearchForm()
+setUpResponsiveNavButton()
 
-loadLanguageConfig().then(() => {
+function populateLanguage() {
   setSimpleTextElement('search', 'search-button')
   setPlaceholder2Element('name', 'search-input')
   setSimpleTextElement('semester', 'main-title')
@@ -138,5 +137,4 @@ loadLanguageConfig().then(() => {
   setTextElementByList('site', ['logo-text-0', 'logo-text-1', 'logo-text-2'])
 
   renderStudents()
-})
-
+}

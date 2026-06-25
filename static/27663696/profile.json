@@ -1,4 +1,4 @@
-const profile = {	
+{
 	"name":"Luis Jose Garcia Gutierrez",
 	"description":"Soy estudiante de Computacion en la Universidad Central de Venezuela (UCV) cursando actualmente mi septimo semestre. Parte de mis objetivos en la carrera es salir con la mencion de Base de Datos, soy apasionado con la tecnologia y me encantan las innovaciones actuales con la IA.",
 	"color": "Cian",

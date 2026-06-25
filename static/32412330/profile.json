@@ -1,4 +1,4 @@
-const profile = {	
+{
 	"name":"Gabriel Conde",
 	"description":"Soy estudiante de Computación en la Facultad de Ciencias de la Universidad Central de Venezuela (UCV), actualmente cursando el sexto semestre de la carrera. Me apasionan la programación, los videojuegos, la música, el dibujo y la escritura literaria, así como también la programación competitiva, razón por la cual participé en el Super Regional Latinoamericano ICPC 2024 y 2025.",
 	"color": "Naranja",

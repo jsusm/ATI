@@ -1,4 +1,4 @@
-const profile = {
+{
     "name":"Darvin Hernández",
     "description":"Soy Estudiante de Computación de la Universidad Central de Venezuela (UCV), actualmente estoy cursando el Séptimo semestre de la carrera, me interesa mucho el área de Base de datos y el área de Aplicaciones en internet",
     "color": "Azul",
