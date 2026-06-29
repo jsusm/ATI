@@ -38,10 +38,23 @@ def get_profiles_data():
 
     return data
 
+def get_profile_data(ci: str):
+    data_path = Path('./static/')
+    profile_file = "profile.json"
+    with open(data_path / ci / profile_file, "r", encoding="utf-8") as file:
+        data = json.load(file)
+
+    return data
+
+
 def render(data: AppCookieData):
     lang = get_lang_data(data.lang)
-    profiles = get_profiles_data()
-    return render_shell(data, render_index_page(lang, profiles), lang)
+    if data.ci == None:
+        profiles = get_profiles_data()
+        return render_shell(data, render_index_page(lang, profiles), lang)
+    else:
+        profile_data = get_profile_data(str(data.ci))
+        return render_shell(data, render_profile(lang, profile_data) ,lang)
 
 def handleIndexPage(environ, start_response):
     pass
@@ -65,6 +78,26 @@ def app(environ, start_response):
         headers = [('Content-Type', 'text/html')]
         start_response(status, headers)
         return [lang.encode()]
+
+    if(environ['REQUEST_URI'].startswith('/index.py/set-ci')):
+        url = f'https://somedomain.com{environ['REQUEST_URI']}'
+        query_string = urlsplit(url).query
+        ci = parse_qs(query_string)['ci'][0]
+
+        if ci == 'null':
+            ci = None
+        else:
+            ci = int(ci)
+
+        session_data.ci = ci
+        session_data.load_to_session(session)
+        session.save()
+
+        status = "200 OK"
+        headers = [('Content-Type', 'text/html')]
+        start_response(status, headers)
+        return [f"{ci}".encode()]
+
 
 
     status = "200 OK"
@@ -100,14 +133,14 @@ def render_shell(session_data: AppCookieData, content: str, lang):
   <script src="/static/js/index.js" defer></script>
   <script>
     const lang = "{session_data.lang}"
-    const ci = {ci}
+    let ci = {ci}
   </script>
 </head>
 
 <body>
-  <header class="unfolded" id="main-header">
+  <header id="main-header">
     <div class="title-container">
-      <a href="/" id="logo">
+      <a id="logo">
           <span id="logo-text-0">{lang['site'][0]}</span>
           <span id="logo-text-1" class="logo-small-subtext">{lang['site'][1]}</span>
           <span id="logo-text-2">{lang['site'][2]}</span>
@@ -130,7 +163,14 @@ def render_shell(session_data: AppCookieData, content: str, lang):
       </div>
     </div>
   </header>
+  <main id="main">
   {content}
+  </main>
+  <footer>
+    <p id="copyright">
+    {lang['copyRight']}
+    </p>
+  </footer>
 </body>
 
 </html>
@@ -171,9 +211,87 @@ def render_index_page(lang, profiles):
     {profiles}
     </div>
   </section>
-  <footer>
-    <p id="copyright">
-    {lang['copyRight']}
-    </p>
-  </footer>
+"""
+
+def plural_singular_lang(lang, key, nvalue):
+    if nvalue > 1:
+        return lang[key][1]
+    else:
+        return lang[key][0]
+
+def profile_property(profile, key):
+    content = profile[key]
+    if isinstance(content, list):
+        return ", ".join(content)
+    return content
+
+
+def render_profile(lang, profile):
+    ci = profile['ci']
+    imgExt = profile['image_ext']
+    return f"""
+
+  <section class="user-profile">
+    <div class="user-profile_img_container" id="img-container">
+      <picture>
+        <source media="(min-width: 768px)" srcset="/static/{ci}/{ci}Big{imgExt}">
+        <img src="/static/{ci}/{ci}Small{imgExt}" alt="Imagen de perfil">
+      </picture>
+    </div>
+
+    <div class="user-profile_content">
+      <h1 id="student-name">{profile['name']}</h1>
+      <p id="student-description" class="user-profile_content_description">
+        {profile['description']}
+      </p>
+      <table>
+        <tbody>
+          <tr>
+            <td class="user-profile_content_qualities-keys" id="favorite-color-key">
+            {lang['color']}
+            </td>
+            <td id="favorite-color-value">
+            {profile['color']}
+            </td>
+          </tr>
+          <tr>
+            <td class="user-profile_content_qualities-keys" id="favorite-book-key">
+            {plural_singular_lang(lang, 'book', len(profile['book']))}
+            </td>
+            <td id="favorite-book-value">
+            {profile_property(profile, 'book')}
+            </td>
+          </tr>
+          <tr>
+            <td class="user-profile_content_qualities-keys" id="favorite-music-key">
+            {plural_singular_lang(lang, 'music', len(profile['music']))}
+            </td>
+            <td id="favorite-music-value">
+            {profile_property(profile, 'music')}
+            </td>
+          </tr>
+          <tr>
+            <td class="user-profile_content_qualities-keys" id="favorite-game-key">
+            {plural_singular_lang(lang, 'video_game', len(profile['video_game']))}
+            </td>
+            <td id="favorite-game-value">
+            {profile_property(profile, 'video_game')}
+            </td>
+          </tr>
+          <tr>
+            <td class="user-profile_content_qualities-keys" id="learned-languages-key">
+            {lang['language']}
+            </td>
+            <td id="learned-languages-value">
+            {profile_property(profile, 'language')}
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <p>
+        <span id="contact-copy">{lang['email'][:-8]}</span>
+        <a id="contact-anchor" href="mailto:{profile['email']}">{profile['email']}</a>
+      </p>
+    </div>
+  </section>
 """
